@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> {% if page.title %} {{ page.title }} | {% endif %} EdTechConf </title>
+  <meta name="description" content="EdTechConf brings together like-minded schools, teachers and thought leaders for the purpose of equipping, inspiring and training teachers in the use of educational technology" />
+  {% if page.meta-description %}
+    <meta name="description" content="{{ page.meta-description }}" />
+  {% endif %}
+  <meta name="author" content="@timkeller">
+
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <style type="text/css"></style><link type="image/png" rel="shortcut icon" href="/img/favicon.png">
+</head>
+<body>
+        {% include header.html %}
+  
+  <div class="container">
+    <section class="intro">
+      <h1>
+        <span>Education, Technology</span> 
+        <span class="light">and You.</span>
+      </h1>
+      
+        <p>
+        EdTechConf brings together like-minded schools, teachers and thought leaders for the purpose of equipping, inspiring and training teachers in the use of educational technology.
+        </p>
+
+    </section>
+  </div>
+  
+
+    <div class="container dark">
+	
+	{{ content }}  
+      
+    </div>
+
+
+    <footer>
+      {% include footer.html %}
+    </footer>
+
+  <script type="text/javascript" async="" src="/js/ga.js"></script>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'TODO']);
+   _gaq.push(['_trackPageview']);
+
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+
+</body></html>

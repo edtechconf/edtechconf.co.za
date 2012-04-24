@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> {% if page.title %} {{ page.title }} | {% endif %} EdTechConf </title>
+  <meta name="description" content="EdTechConf brings together like-minded schools, teachers and thought leaders for the purpose of equipping, inspiring and training teachers in the use of educational technology" />
+  {% if page.meta-description %}
+    <meta name="description" content="{{ page.meta-description }}" />
+  {% endif %}
+  <meta name="author" content="@timkeller">
+
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <style type="text/css"></style><link type="image/png" rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+  {% include header.html %}
+  
+  <div class="container">
+    <section class="intro event">
+      <h1>
+        <span>{{ page.title }}</span> 
+        <span class="light">{{ page.categories | first | capitalize }}</span>
+      </h1>
+    </section>
+  </div>
+  
+
+    <div class="container dark">
+      <div class="row">
+        <div class="span6">
+          <h2>When</h2>
+          <p>{{ page.date_start | date: "%d %h %Y %H:%M" }} &mdash; {{ page.date_end | date: "%d %h %Y %H:%M" }}</p>
+        </div>
+        <div class="pull-right">
+          <a href="https://docs.google.com/spreadsheet/viewform?formkey={{ page.googleform }}" class="btn btn-primary btn-large" target="_blank">Register Now</a>
+          <br><br>
+          <small>{{ page.cost }} per delegate</small>
+        </div>
+      </div>
+      <h2>About</h2>
+      {{ content }}   
+      <h2>Location</h2>
+      <p>{{ page.location }}</p>
+      <iframe width="820" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={{ page.address }}&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear={{ page.address }}&amp;z=16&amp;output=embed"></iframe><br><br>
+      
+      <div class="row">
+        <div class="span5">
+          <h2>Registration</h2>
+          <p>Registration is {{ page.cost }} per delegate.</p>
+          <a href="https://docs.google.com/spreadsheet/viewform?formkey={{ page.googleform }}" class="btn btn-primary btn-large" target="_blank">Register Now</a>
+        </div>
+        <div class="span5">
+          <h2>Queries</h2>
+          <p>Email <a href="mailto:events@edtechconf.co.za">events@edtechconf.co.za</a></p>
+        </div>
+      </div>
+      
+      <div class="finally">
+        <hr>
+        <h6>We can't wait to see you there!</h6>
+      </div>
+      </div>
+
+    <footer>
+      {% include footer.html %}
+    </footer>
+
+  <script type="text/javascript" async="" src="/js/ga.js"></script>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'TODO']);
+   _gaq.push(['_trackPageview']);
+
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+
+</body></html>

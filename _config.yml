@@ -1,0 +1,8 @@
+permalink: pretty
+navigation:
+- url: /conferences
+  text: Conferences
+- url: /thinkshops
+  text: Thinkshops 
+- url: /about
+  text: About
