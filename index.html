@@ -20,3 +20,41 @@ layout: hero
 		</section>
 	</div>
 </div>
+
+<br>
+<h2>Follow us on the interwebs</h2>
+<div class="row">
+	<div class="span5">
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+		  version: 2,
+		  type: 'profile',
+		  rpp: 5,
+		  interval: 30000,
+		  width: 400,
+		  height: 300,
+		  theme: {
+		    shell: {
+		      background: '#333333',
+		      color: '#ffffff'
+		    },
+		    tweets: {
+		      background: '#000000',
+		      color: '#ffffff',
+		      links: '#82cfe0'
+		    }
+		  },
+		  features: {
+		    scrollbar: false,
+		    loop: false,
+		    live: true,
+		    behavior: 'all'
+		  }
+		}).render().setUser('edtechconf').start();
+		</script>
+	</div>
+	<div class="span5">
+<div style="margin-left:20px" class="fb-like-box" data-href="http://www.facebook.com/edtechconf" data-width="400" data-height="380" data-colorscheme="dark" data-show-faces="false" data-border-color="#333" data-stream="true" data-header="false"></div>
+	</div>
+</div>
