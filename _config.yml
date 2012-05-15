@@ -6,3 +6,5 @@ navigation:
   text: Thinkshops 
 - url: /about
   text: About
+- url: /talks
+  text: Book us
